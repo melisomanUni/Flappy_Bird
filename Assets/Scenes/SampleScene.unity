@@ -370,7 +370,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 346085001}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca47b37ea8a3ca54ca80feb11b676ddc, type: 3}
+  m_Script: {fileID: 11500000, guid: 73ef893b0f08a6b4eba030e0381af1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &384389502
@@ -439,7 +439,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -547,10 +547,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76936454f5cc48140bf00fcc8f3419a5, type: 3}
+  m_Script: {fileID: 11500000, guid: 620bdcc2c26bc074a9b917ec3790fc74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bird: {fileID: 1216162867}
+  _bird: {fileID: 1216162870}
   _xOffset: 1
 --- !u!114 &519420034
 MonoBehaviour:
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7c911595d63ad4d90ffe88f2ab7136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bird: {fileID: 1216162867}
+  _bird: {fileID: 1216162870}
   _pipeGenerator: {fileID: 875253541}
   _startScreen: {fileID: 567150085}
   _endGameScreen: {fileID: 2132789876}
@@ -645,6 +645,7 @@ GameObject:
   - component: {fileID: 638561180}
   - component: {fileID: 638561179}
   - component: {fileID: 638561181}
+  - component: {fileID: 638561182}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -778,11 +779,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 638561177}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19b6024ea9efbe547878370c1f76b9d9, type: 3}
+  m_Script: {fileID: 11500000, guid: f6f776d9e6ca33f4b8a0c9895805945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scoreCounter: {fileID: 1216162870}
+  _scoreCounter: {fileID: 638561182}
   _score: {fileID: 638561179}
+--- !u!114 &638561182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638561177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd3cec3f023aeb4cad213c2aadeebeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &728053971
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,7 +1084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _container: {fileID: 1381554401}
-  _prefab: {fileID: 5612805394839580342, guid: 531455f814096524f91e2834958aca6b, type: 3}
+  _prefab: {fileID: 5664797890579208923, guid: 9e75df57770fe6347a65407b957a770d, type: 3}
 --- !u!1 &1216162862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,9 +1097,9 @@ GameObject:
   - component: {fileID: 1216162863}
   - component: {fileID: 1216162866}
   - component: {fileID: 1216162869}
-  - component: {fileID: 1216162865}
-  - component: {fileID: 1216162867}
-  - component: {fileID: 1216162868}
+  - component: {fileID: 1216162873}
+  - component: {fileID: 1216162872}
+  - component: {fileID: 1216162871}
   - component: {fileID: 1216162870}
   m_Layer: 0
   m_Name: Bird
@@ -1162,23 +1175,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1216162865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216162862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e79f6e1f931844f44bb7424d051d384f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tapForce: 4
-  _speed: 2.5
-  _rotationSpeed: 1
-  _maxRotationZ: 35
-  _minRotationZ: -60
 --- !u!50 &1216162866
 Rigidbody2D:
   serializedVersion: 4
@@ -1206,30 +1202,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1216162867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216162862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b156c3b137e9de54a941039f9e371e3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1216162868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216162862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d2a0186253420446af1cea9a88acc1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &1216162869
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1274,9 +1246,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 1216162862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70fdead3752d9f14e8e56e392120ded2, type: 3}
+  m_Script: {fileID: 11500000, guid: 096496d7c62672d4cadc49de38ae163d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1216162871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216162862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1f3709b9451584fbd6a7dfe3241413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1216162872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216162862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd3cec3f023aeb4cad213c2aadeebeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1216162873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216162862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821983d6b51f6484c8b73577f9849c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tapForce: 4
+  _speed: 2
+  _rotationSpeed: 10
+  _maxRotationZ: 60
+  _minRotationZ: -60
 --- !u!1 &1381554400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,7 +1319,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1428884878
 GameObject:

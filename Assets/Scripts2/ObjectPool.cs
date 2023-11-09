@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
@@ -37,6 +36,6 @@ public class ObjectPool : MonoBehaviour
 
     public void Reset()
     {
-       _pool.Clear();
+        _pool.Clear();
     }
 }
