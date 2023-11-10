@@ -15,6 +15,7 @@ public class BirdCollisionHandler : MonoBehaviour
     {
         if (other.TryGetComponent(out IInteractable interactable))
         {
+            Debug.Log("isTrig");
             CollisionDetected?.Invoke(interactable);
         }
     }
