@@ -12,7 +12,7 @@ public class RewardAds : MonoBehaviour
     private void OnOpenCallback()
     {
         Time.timeScale = 0;
-        AudioListener.volume= 0f;
+        AudioListener.volume = 0f;
     }
 
     private void OnRewardCallback()
